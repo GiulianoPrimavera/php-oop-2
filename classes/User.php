@@ -7,30 +7,28 @@ class User {
     private $email;
     private $numeroCellulare;
 
-    function __construct($_nome, $_cognome, $_email){
+    function __construct($_nome, $_cognome, $_email, $_numeroCell){
         $this->setName($_nome);
         $this->setLastName($_cognome);
         $this->setEmail($_email);
+        $this->setPhoneNumber($_numeroCell);
+        // setPhoneNumber
     }
 
     public function setName($value){
-        if(isset($value)){
-            $this->nome = $value;
-        }else{
-            $this->nome = null;
-        }
+        $this->nome = $value;
     }
 
     public function setLastName($value){
-        if(isset($value)){
-            $this->cognome = $value;
-        }
+        $this->cognome = $value;
     }
 
     public function setEmail($value){
-        if(isset($value)){
-            $this->email = $value;
-        }
+        $this->email = $value;
+    }
+
+    public function setPhoneNumber($value){
+        $this->numeroCellulare = $value;
     }
 
 }
