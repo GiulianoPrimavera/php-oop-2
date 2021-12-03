@@ -9,7 +9,7 @@
 include "data/dataUser.php";
 include "classes/User.php"; 
 
-$pippo = new User($dataUser);
+$pippo = new User("marco", "magno", "marco.magno@gmail.co");
 var_dump($pippo);
 
 
