@@ -6,13 +6,14 @@ class User {
     private $cognome;
     private $email;
     private $numeroCellulare;
+    private $eta;
 
-    function __construct($_nome, $_cognome, $_email, $_numeroCell){
+    function __construct($_nome, $_cognome, $_email, $_numeroCell, $_eta){
         $this->setName($_nome);
         $this->setLastName($_cognome);
         $this->setEmail($_email);
         $this->setPhoneNumber($_numeroCell);
-        // setPhoneNumber
+        $this->setEta($_eta);
     }
 
     public function setName($value){
@@ -29,6 +30,10 @@ class User {
 
     public function setPhoneNumber($value){
         $this->numeroCellulare = $value;
+    }
+
+    public function setEta($value){
+        $this->eta = $value;
     }
 
 }
