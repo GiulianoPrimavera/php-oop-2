@@ -1,5 +1,0 @@
-<?php 
-$dataUser = [
-    "nome" => "marco"
-]
-?>
