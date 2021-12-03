@@ -7,13 +7,29 @@ class User {
     private $email;
     private $numeroCellulare;
 
-    function __construct($arrUsers){
-        $this->setName($arrUsers);
+    function __construct($_nome, $_cognome, $_email){
+        $this->setName($_nome);
+        $this->setLastName($_cognome);
+        $this->setEmail($_email);
     }
 
     public function setName($value){
-        if(array_key_exists("nome", $value)){
-            $this->nome = $value["nome"];
+        if(isset($value)){
+            $this->nome = $value;
+        }else{
+            $this->nome = null;
+        }
+    }
+
+    public function setLastName($value){
+        if(isset($value)){
+            $this->cognome = $value;
+        }
+    }
+
+    public function setEmail($value){
+        if(isset($value)){
+            $this->email = $value;
         }
     }
 
