@@ -2,7 +2,7 @@
 
 class Product{
     private $nome;
-    private $prezzo;
+    public $prezzo;
     private $descrizione;
     private $quantita;
 
