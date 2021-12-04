@@ -7,6 +7,7 @@ class User {
     private $email;
     private $numeroCellulare;
     protected $eta;
+    public $carrello = [];
 
     function __construct($_nome, $_cognome, $_email, $_numeroCell, $_eta){
         $this->setName($_nome);
