@@ -8,13 +8,15 @@ class User {
     private $numeroCellulare;
     protected $eta;
     public $carrello = [];
+    protected $credit = 200;
 
-    function __construct($_nome, $_cognome, $_email, $_numeroCell, $_eta){
+    function __construct($_nome, $_cognome, $_email, $_numeroCell, $_eta, $_credit){
         $this->setName($_nome);
         $this->setLastName($_cognome);
         $this->setEmail($_email);
         $this->setPhoneNumber($_numeroCell);
         $this->setEta($_eta);
+        $this->setCredit($_credit);
     }
 
     public function setName($value){
@@ -35,6 +37,15 @@ class User {
 
     public function setEta($value){
         $this->eta = $value;    
+    }
+
+    public function setCredit($value){
+        $this->credit = $value;    
+    }
+
+    //funzione che gestisce il credito dell'utente all'acquisto di un prodotto
+    public function setNewCredit($productPrice){
+        $this->credit = $this->credit - $productPrice;
     }
 
 }
