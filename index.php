@@ -15,8 +15,12 @@ $pippo = new User("marco", "magno", "marco.magno@html.co", "3334445566", "32");
 var_dump($pippo);
 
 $pluto = new UserPrime("luigi", "magno", "luigi.magno@html.co", "4445556677", "40");
-$pluto->setCodice(40);
+$pluto->setCodice();
 var_dump($pluto);
+
+$paperino = new UserPrime("Paperino", "Duck", "paperino.duck@html.co", "2221113344", "20");
+$paperino->setCodice();
+var_dump($paperino);
 
 $lavatrice = new Product("lavatrice2000", "2000", "lavatrice grande", "20");
 var_dump($lavatrice);
