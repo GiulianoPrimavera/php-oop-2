@@ -29,5 +29,10 @@ $sushi = new ProductFood("sushi", "20", "sushi rolls", "10");
 $sushi->setFoodType("not vegan");
 var_dump($sushi);
 
+$pippo->carrello[] = $sushi;
+$pippo->carrello[] = $sushi;
+var_dump($pippo);
+
+
 
 ?>
