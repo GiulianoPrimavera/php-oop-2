@@ -6,7 +6,7 @@ class User {
     private $cognome;
     private $email;
     private $numeroCellulare;
-    private $eta;
+    protected $eta;
 
     function __construct($_nome, $_cognome, $_email, $_numeroCell, $_eta){
         $this->setName($_nome);
@@ -33,7 +33,7 @@ class User {
     }
 
     public function setEta($value){
-        $this->eta = $value;
+        $this->eta = $value;    
     }
 
 }
