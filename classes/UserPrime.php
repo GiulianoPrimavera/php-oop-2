@@ -2,6 +2,10 @@
 
 
 class UserPrime extends User{
-    private $codiceSconto = "30";
+    private $codiceSconto;
+
+    public function setCodice($value){
+        $this->codiceSconto = $value;
+    }
 }
 ?>
