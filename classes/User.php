@@ -48,5 +48,11 @@ class User {
         $this->credit = $this->credit - $productPrice;
     }
 
+    //funzione che gestisce i pagamenti
+    public function buyProduct($prodotto){
+        $this->carrello[] = $prodotto;
+        $this->setNewCredit($prodotto->prezzo);
+    }
+
 }
 ?>
