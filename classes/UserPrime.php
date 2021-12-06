@@ -8,6 +8,8 @@ class UserPrime extends User{
         if(intval($this->eta) > 30){
             $this->codiceSconto = 60;
         }
+
+        $this->credit = $this->credit + $this->codiceSconto; 
     }
 }
 ?>
