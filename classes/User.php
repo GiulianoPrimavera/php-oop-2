@@ -7,7 +7,7 @@ class User {
     private $email;
     private $numeroCellulare;
     protected $eta;
-    public $carrello = [];
+    protected $carrello = [];
     protected $credit = 200;
 
     function __construct($_nome, $_cognome, $_email, $_numeroCell, $_eta, $_credit){
