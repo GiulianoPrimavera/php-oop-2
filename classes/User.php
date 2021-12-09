@@ -1,13 +1,16 @@
 <?php 
 
+require_once __DIR__ . "/../traits/Cart.php";
+
 class User {
     private $nome;
     private $cognome;
     private $email;
     private $numeroCellulare;
     protected $eta;
-    protected $carrello = [];
     protected $credit = 200;
+
+    use Cart;
 
     function __construct($_nome, $_cognome, $_email, $_numeroCell, $_eta, $_credit){
         $this->setName($_nome);
@@ -45,12 +48,6 @@ class User {
     //funzione che gestisce il credito dell'utente all'acquisto di un prodotto
     public function setNewCredit($productPrice){
         $this->credit = $this->credit - $productPrice;
-    }
-
-    //funzione che gestisce i pagamenti
-    public function buyProduct($prodotto){
-        $this->carrello[] = $prodotto;
-        $this->setNewCredit($prodotto->prezzo);
     }
 
 }
