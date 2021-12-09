@@ -1,9 +1,9 @@
 <?php 
 
-include "classes/User.php"; 
-include "classes/UserPrime.php"; 
-include "classes/Product.php"; 
-include "classes/ProductFood.php"; 
+// include "classes/User.php"; 
+include_once "classes/UserPrime.php"; 
+// include "classes/Product.php"; 
+include_once "classes/ProductFood.php"; 
 
 $pippo = new User("pippo", "magno", "pippo.magno@html.co", "3334445566", "32", 250);
 var_dump($pippo);

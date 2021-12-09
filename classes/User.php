@@ -1,5 +1,4 @@
 <?php 
-// include_once __DIR__ ."/../data/dataUser.php";
 
 class User {
     private $nome;
