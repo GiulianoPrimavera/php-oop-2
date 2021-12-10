@@ -33,5 +33,7 @@ $paperino->addProduct($sushi);
 $paperino->addProduct($sushi);
 var_dump($paperino);
 
+$paperino->removeProduct($sushi);
+var_dump($paperino);
 
 ?>
