@@ -4,13 +4,13 @@ class Product{
     private $nome;
     public $prezzo;
     private $descrizione;
-    private $quantita;
+    // private $quantita;
 
-    function __construct($_nome, $_prezzo, $_descrizione, $_quantita){
+    function __construct($_nome, $_prezzo, $_descrizione/*,  $_quantita = 1 */){
         $this->setName($_nome);
         $this->setPrezzo($_prezzo);
         $this->setDescrizione($_descrizione);
-        $this->setQuantita($_quantita);
+        // $this->setQuantita($_quantita);
     }
 
     public function setName($value){
@@ -22,8 +22,17 @@ class Product{
     public function setDescrizione($value){
         $this->descrizione = $value;
     }
-    public function setQuantita($value){
-        $this->quantita = $value;
+    public function getNome(){
+        return $this->nome;
     }
+    // public function setQuantita($value){
+    //     $this->quantita = $value;
+
+    //     /* if(isset($value)){
+    //         $this->quantita = $value;
+    //     }else{
+    //         $this->quantita = 0;
+    //     } */
+    // }
 }
 ?>
