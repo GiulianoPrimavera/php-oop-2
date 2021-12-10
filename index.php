@@ -16,21 +16,21 @@ $paperino = new UserPrime("Paperino", "Duck", "paperino.duck@html.co", "22211133
 $paperino->setCodice();
 var_dump($paperino);
 
-$lavatrice = new Product("lavatrice2000", "100", "lavatrice grande", "20");
+$lavatrice = new Product("lavatrice2000", "100", "lavatrice grande");
 var_dump($lavatrice);
 
-$sushi = new ProductFood("sushi", "20", "sushi rolls", "10");
+$sushi = new ProductFood("sushi", "20", "sushi rolls");
 $sushi->setFoodType("not vegan");
 var_dump($sushi);
 
 //faccio comprare a pluto una lavatrice e un sushi
-$pluto->buyProduct($lavatrice);
-$pluto->buyProduct($sushi);
+$pluto->addProduct($lavatrice);
+$pluto->addProduct($sushi);
 var_dump($pluto);
 
 //faccio comprare a paperino due sushi
-$paperino->buyProduct($sushi);
-$paperino->buyProduct($sushi);
+$paperino->addProduct($sushi);
+$paperino->addProduct($sushi);
 var_dump($paperino);
 
 
