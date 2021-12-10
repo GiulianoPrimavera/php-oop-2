@@ -30,6 +30,10 @@ class User {
     }
 
     public function setEmail($value){
+        
+        if(!filter_var($value, FILTER_VALIDATE_EMAIL) ){
+            throw new Exception("email non valida");
+        }
         $this->email = $value;
     }
 
