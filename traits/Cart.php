@@ -14,6 +14,15 @@ trait Cart {
     }
 
     //funzione remove product
+    public function removeProduct($prodotto){
+        if(array_key_exists($prodotto->getNome(), $this->cart) && $this->cart[$prodotto->getNome()]["quantita"] > 1){
+            //riduco la quantità -1
+        }else if(array_key_exists($prodotto->getNome(), $this->cart) && $this->cart[$prodotto->getNome()]["quantita"] = 1){
+            //rimuovo il prodotto
+        }else{
+            //non faccio nulla
+        }
+    }
 
     //funzione calcola prezzo
     
